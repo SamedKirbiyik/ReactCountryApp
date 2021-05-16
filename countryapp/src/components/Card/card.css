@@ -1,0 +1,9 @@
+.card-box {
+    width:23;
+    border: 2px solid red; 
+    margin: 5px;
+}
+
+.image{
+    width: 100%;
+}
