@@ -1,10 +1,11 @@
 import react from "react";
 
 
-const button = ()=>{
+export const button = (props)=>{
+    console.log("parenttan gelen budur", props)
     return(
-    <button> Onayla </button>
+       <button onClick={props.handleClick}>{props.isim} </button>
         
     )
 }
-export default button;
+
