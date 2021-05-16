@@ -23,8 +23,9 @@ const App = ()=>{
         ()=>{
            // console.log("useEffectin için çalıştı ")
             axios.get("https://restcountries.eu/rest/v2/all")
-            .then((cevap)=>{
-            setData(cevap.data)}).catch{(hata)=>{console.log(hata)}}
+            .then((cevap)=>
+            {
+            setData(cevap.data)}).catch((hata)=>{console.log(hata)})
         },[]
     );
     console.log("useEffectin altı")
@@ -35,18 +36,17 @@ const App = ()=>{
         {console.log("return'in için çalıştı")}
         <div>{sayac}</div>
         <button handClick={arttirmaFonksiyonu} isim="Arttırma Butonu"/>
+        <button isim="Bu buton sıfırlar" handClick={sifirla}/>
         <button isim="Boş" handClick={bosDeger}/>
         <div className="bayrak-wrapper">
         {veri.map((item)=>{
-    return   
+     
     return<Card kaynak={item.flag} 
         bayrak={item.name}/>;
-        </div>
-      
-   
         
         })
         }
+        </div>
         </div>
         
     );
